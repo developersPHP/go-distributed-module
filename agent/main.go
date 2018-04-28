@@ -15,6 +15,7 @@ var (
 	transport *lib.UdpTransportSender
 )
 
+//TODO 这里面还有很多功能有待完善，比如，如何优雅关闭、如何压缩传输字节、如何设置buffer大小
 func init() {
 	cli = cli2.NewUdpClient(options.Host("127.0.0.1"), options.Port(9981))
 	server = server2.NewUdpServer(options.Host("127.0.0.1"), options.Port(9981),
